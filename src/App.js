@@ -1,6 +1,7 @@
 import React from 'react';
 import ColorPicker from './components/color_picker/ColorPicker.jsx';
 import './App.css';
+import logo from './assets/logo.svg';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       className='App'
       style={{ background: 'linear-gradient(to right, #8dd9c2 , #d7fa80)' }}>
       <div className='App-header'>
-        <h1>iDropr</h1>
+        <img className='header-image' src={logo} alt='iDropr' />
       </div>
       <div className='App-body'>
         <ColorPicker />

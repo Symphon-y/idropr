@@ -9,7 +9,11 @@
 }
 
 .App-header {
+  background-color: white;
+}
 
+.header-image {
+  width: 75%;
 }
 
 .App-body {

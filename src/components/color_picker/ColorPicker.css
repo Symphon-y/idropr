@@ -13,9 +13,3 @@
   width: 75%;
   background-color: white;
 }
-
-.hex_value {
-  display: flex;
-  align-items: center;
-  padding-left: 5%;
-}
