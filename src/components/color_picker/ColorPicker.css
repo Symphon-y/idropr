@@ -1,0 +1,21 @@
+.picker {
+  background: white;
+  height: 4em;
+  width: 5.5em;
+  border: none;
+  -webkit-appearance: none;
+  outline: none;
+  padding: 5px;
+}
+
+.color_picker_container {
+  display: flex;
+  width: 75%;
+  background-color: white;
+}
+
+.hex_value {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}

@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import ColorPicker from './components/color_picker/ColorPicker.jsx';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className='App'
+      style={{ background: 'linear-gradient(to right, #8dd9c2 , #d7fa80)' }}>
+      <div className='App-header'>
+        <h1>iDropr</h1>
+      </div>
+      <div className='App-body'>
+        <ColorPicker />
+      </div>
+      <div className='App-footer'>
+        <span className='link_container'>
+          <a href='/'>Donate</a>
+          <a href='/' className='github_link'>
+            Github
+          </a>
+          <a href='/'>Twitter</a>
+        </span>
+      </div>
     </div>
   );
 }
