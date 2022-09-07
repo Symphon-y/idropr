@@ -31,10 +31,15 @@ const ColorPicker = ({ randomColor, id }) => {
 
   const { setCurrentColors, currentColors } = useContext(MainContext);
   const options = ['Copy To Clipboard', 'Save To Pallet', 'Delete'];
+
   const handleMenuItemClick = (event, index) => {
     let selection = options[index];
-    if (selection === options[2]) {
-      const colors = currentColors;
+    const colors = currentColors;
+    if (selection === options[0]) {
+      navigator.clipboard.writeText(hex);
+    } else if (selection === options[1]) {
+      //TODO Create a pallet and save it to localstorage
+    } else if (selection === options[2]) {
       delete colors[id];
       setCurrentColors({ ...colors });
     }
