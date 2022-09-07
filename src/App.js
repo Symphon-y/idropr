@@ -54,11 +54,15 @@ function App() {
       </Button>
       <div className='App-footer'>
         <span className='link_container'>
-          <a href='/'>Donate</a>
-          <a href='/' className='github_link'>
+          <a href='/' className='link'>
+            Donate
+          </a>
+          <a href='/' className='link github_link'>
             Github
           </a>
-          <a href='/'>Twitter</a>
+          <a href='/' className='link'>
+            Twitter
+          </a>
         </span>
       </div>
     </div>

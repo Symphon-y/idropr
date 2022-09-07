@@ -58,9 +58,8 @@ const ColorPicker = ({ randomColor, id }) => {
     setOpen(false);
   };
   const handleChange = (e) => {
-    let colorKey = e.target.id;
     let color = e.target.value;
-    setCurrentColors({ ...currentColors, [colorKey]: color });
+    setCurrentColors({ ...currentColors, [id]: color });
     setHex(color);
   };
 

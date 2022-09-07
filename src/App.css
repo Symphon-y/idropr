@@ -33,13 +33,24 @@
 }
 
 .link_container {
+  margin: 0%;
+  height: 100%;
+  width: 100%;
   display: flex;
   /* align-content: center; */
   justify-content: center;
+  align-items: center;
   padding-bottom: 2.5%;
+  background-color: white;
 }
 
 .github_link {
   margin-left: 15%;
   margin-right: 15%;
+}
+
+.link{
+  text-decoration: none;
+  padding-top: 2%;
+  color: #292929;
 }
