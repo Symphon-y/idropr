@@ -54,13 +54,25 @@ function App() {
       </Button>
       <div className='App-footer'>
         <span className='link_container'>
-          <a href='/' className='link'>
+          <a
+            href='https://www.buymeacoffee.com/RhysCreates'
+            className='link'
+            target='_blank'
+            rel='noopener noreferrer'>
             Donate
           </a>
-          <a href='/' className='link github_link'>
+          <a
+            href='https://github.com/Symphon-y/idropr'
+            className='link github_link'
+            target='_blank'
+            rel='noopener noreferrer'>
             Github
           </a>
-          <a href='/' className='link'>
+          <a
+            href='https://twitter.com/travis_redden'
+            className='link'
+            target='_blank'
+            rel='noopener noreferrer'>
             Twitter
           </a>
         </span>
