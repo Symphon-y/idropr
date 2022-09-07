@@ -27,23 +27,23 @@ const ColorPicker = ({ randomColor, id }) => {
   const [hex, setHex] = useState(randomColor);
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
-  const [selectedIndex, setSelectedIndex] = useState(1);
 
   const { setCurrentColors, currentColors } = useContext(MainContext);
-  const options = ['Copy To Clipboard', 'Save To Pallet', 'Delete'];
+  const options = {
+    0: 'Copy To Clipboard',
+    1: 'Delete',
+  };
 
-  const handleMenuItemClick = (event, index) => {
-    let selection = options[index];
+  const handleMenuItemClick = (event, selection) => {
     const colors = currentColors;
-    if (selection === options[0]) {
+    if (selection === 'Copy To Clipboard') {
       navigator.clipboard.writeText(hex);
-    } else if (selection === options[1]) {
+    } else if (selection === 'Save To Pallet') {
       //TODO Create a pallet and save it to localstorage
-    } else if (selection === options[2]) {
+    } else if (selection === 'Delete') {
       delete colors[id];
       setCurrentColors({ ...colors });
     }
-    setSelectedIndex(index);
     setOpen(false);
   };
 
@@ -111,11 +111,10 @@ const ColorPicker = ({ randomColor, id }) => {
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList id='split-button-menu' autoFocusItem>
-                    {options.map((option, index) => (
+                    {Object.values(options).map((option) => (
                       <MenuItem
                         key={option}
-                        selected={index === selectedIndex}
-                        onClick={(event) => handleMenuItemClick(event, index)}>
+                        onClick={(event) => handleMenuItemClick(event, option)}>
                         {option}
                       </MenuItem>
                     ))}
