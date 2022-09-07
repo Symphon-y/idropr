@@ -48,7 +48,11 @@ Clicking the color swatch expands a color pallet view with an eye dropper which 
 
 <h2 style="color:#81DBD8"> Installation: </h2>
 
-Getting your own copy of iDropr is easy!
+Getting iDropr is easy!
+- [Install From The Chrome Web Store](https://chrome.google.com/webstore/detail/idropr/ajjjpcdebdeapjpneomcklnekangboii?hl=en)
+  <hr>
+
+ Or if you'd like to fork your own copy
 
 - Fork and clone this repo to your local machine
 - `npm install`
