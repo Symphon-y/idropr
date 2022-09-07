@@ -19,9 +19,9 @@ iDropr is a chrome extensio that gives you quick access to an eyedropper tool to
 <p align="center">
 <a href="#-about-idropr-" style="color: white">About</a> |
 <a href="#-components-" style="color: white">Components</a> |
-<a href="#new-entry" style="color: white">New Entry</a> |
-<a href="#home-screen" style="color: white">Home Screen</a> |
-<a href="#-contributors-" style="color: white">Contributors</a>
+<a href="#home-screen--eye-dropper" style="color: white">Eye Dropper</a> |
+<a href="#copying-hex-value" style="color: white">Copying Hex</a> |
+<a href="#deleting-color-swatch" style="color: white">Deleting Swatches</a>
 </p>
 
 <hr style="background-color: #5c5c5c;height: 2.0px;"/>
