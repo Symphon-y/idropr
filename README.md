@@ -29,14 +29,13 @@ iDropr is a chrome extensio that gives you quick access to an eyedropper tool to
 <h2 style="color:#81DBD8"> Components </h2>
 This section provides a broad overview of just a few of the features I implemented for the extension.
 
-### Home Screen | Color Picker
-The Home page displays a plus button which when clicked generates a color picker component with a random hex value.
+### Home Screen | Eye Dropper
+The Home page displays a plus button which when clicked generates a color picker component with a randomly generated default hex value.
+
+Clicking the color swatch expands a color pallet view with an eye dropper which when clicked allows you to select any color on your visible desktop.
 
 ![Color Picker](https://media.giphy.com/media/81UUQT9aAYfvZB1GAc/giphy.gif)
 
-
-### Eye Dropper
-Clicking the color swatch expands a color pallet view with an eye dropper which when clicked allows you to select any color on your visible desktop.
 
 #### Copying Hex Value
 
