@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, useRef } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { MainContext } from '../../context/MainContext.js';
 
 import './ColorPicker.css';
@@ -23,7 +23,7 @@ const buttonSx = {
   },
 };
 
-const ColorPicker = ({ pickerList, randomColor, setpickerList }) => {
+const ColorPicker = ({ randomColor, id }) => {
   const [hex, setHex] = useState(randomColor);
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
@@ -31,27 +31,13 @@ const ColorPicker = ({ pickerList, randomColor, setpickerList }) => {
 
   const { setCurrentColors, currentColors } = useContext(MainContext);
   const options = ['Copy To Clipboard', 'Save To Pallet', 'Delete'];
-  //const handleClick = (e) => {};
   const handleMenuItemClick = (event, index) => {
     let selection = options[index];
     if (selection === options[2]) {
       const colors = currentColors;
-      //console.log(colors[randomColor]);
-      delete colors[randomColor];
+      delete colors[id];
       setCurrentColors({ ...colors });
-      setpickerList((prevPickers) =>
-        pickerList.filter((picker) => {
-          console.log('this is picker');
-          console.log(picker.props.randomColor);
-          console.log(randomColor);
-          console.log(picker.props.randomColor === randomColor);
-
-          return picker !== randomColor;
-        })
-      );
     }
-    // console.log(randomColor);
-    // console.log(pickerList);
     setSelectedIndex(index);
     setOpen(false);
   };
@@ -64,21 +50,14 @@ const ColorPicker = ({ pickerList, randomColor, setpickerList }) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
-
     setOpen(false);
   };
   const handleChange = (e) => {
-    // updates color values while holding on to other color values
     let colorKey = e.target.id;
     let color = e.target.value;
     setCurrentColors({ ...currentColors, [colorKey]: color });
     setHex(color);
   };
-
-  useEffect(() => {
-    setCurrentColors({ ...currentColors, [randomColor]: randomColor });
-    setHex(randomColor);
-  }, []);
 
   return (
     <div className='color_picker_container'>

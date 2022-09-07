@@ -1,10 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import ColorPicker from './components/color_picker/ColorPicker.jsx';
 import './App.css';
 import logo from './assets/logo.svg';
 import { Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { MainContext } from './context/MainContext.js';
+import uuid from 'react-uuid';
 const buttonSx = {
   color: '#234650',
   border: 'none',
@@ -14,43 +15,40 @@ const buttonSx = {
   },
 };
 function App() {
-  const [pickerList, setpickerList] = useState([]);
-  const { currentColors } = useContext(MainContext);
+  const { setCurrentColors, currentColors } = useContext(MainContext);
   let backgroundColors = Object.values(currentColors).join(', ');
-  let bgStyleString =
-    pickerList.length === 1
-      ? `${backgroundColors}`
-      : `linear-gradient(to right, ${backgroundColors})`;
+
+  let bgStyleString;
+  if (Object.entries(currentColors).length === 0) {
+    bgStyleString = 'white';
+  } else if (Object.entries(currentColors).length === 1) {
+    bgStyleString = `${backgroundColors}`;
+  } else {
+    bgStyleString = `linear-gradient(to right, ${backgroundColors})`;
+  }
+
   const bgStyle = {
     background: bgStyleString,
   };
 
-  useEffect(() => {
-    // console.log('hello from useEffect');
-    // console.log(currentColors);
-  }, []);
+  useEffect(() => {}, []);
 
   const onAddBtnClick = (event) => {
-    //TODO create random id and so forth here > give them as props
     let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    setpickerList([
-      ...pickerList,
-      <ColorPicker
-        key={pickerList.length}
-        randomColor={randomColor}
-        setpickerList={setpickerList}
-        pickerList={pickerList}
-      />,
-    ]);
+    let id = uuid();
+    setCurrentColors({ ...currentColors, [id]: randomColor });
+    event.preventDefault();
   };
-
-  //console.log(backgroundColors);
   return (
     <div className='App' style={bgStyle}>
       <div className='App-header'>
         <img className='header-image' src={logo} alt='iDropr' />
       </div>
-      <div className='App-body'>{pickerList}</div>
+      <div className='App-body'>
+        {Object.entries(currentColors).map(([id, color]) => {
+          return <ColorPicker id={id} key={id} randomColor={color} />;
+        })}
+      </div>
       <Button variant='outlined' sx={buttonSx} onClick={onAddBtnClick}>
         <AddIcon />
       </Button>
