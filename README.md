@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+<!-- <div style="display: flex; flex-direction: column; justify-content: center;"> -->
+<div style="position: relative;">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div style="align-self: flex-start;>
+<div align="left">
+<img src="https://img.shields.io/github/package-json/dependency-version/TitanInSpirit/Project_Atelier/react" />
+</div>
+<br></br>
+<div align="center">
+  <img src="./src/assets/logo.svg" width=75%>
+</div>
 
-## Available Scripts
+ <h2 style="color:#81DBD8"> About iDropr: </h2>
 
-In the project directory, you can run:
+iDropr is a chrome extensio that gives you quick access to an eyedropper tool to quickly get the hex, rgb, or hsl values of any color on your desktop.
 
-### `npm start`
+<hr style="background-color: #5c5c5c;height: 2.0px;"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center">
+<a href="#-about-idropr-" style="color: white">About</a> |
+<a href="#-components-" style="color: white">Components</a> |
+<a href="#new-entry" style="color: white">New Entry</a> |
+<a href="#home-screen" style="color: white">Home Screen</a> |
+<a href="#-contributors-" style="color: white">Contributors</a>
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<hr style="background-color: #5c5c5c;height: 2.0px;"/>
 
-### `npm test`
+<h2 style="color:#81DBD8"> Components </h2>
+This section provides a broad overview of just a few of the features I implemented for the extension.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Home Screen | Color Picker
+The Home page displays a plus button which when clicked generates a color picker component with a random hex value.
 
-### `npm run build`
+![Color Picker](https://media.giphy.com/media/81UUQT9aAYfvZB1GAc/giphy.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Eye Dropper
+Clicking the color swatch expands a color pallet view with an eye dropper which when clicked allows you to select any color on your visible desktop.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Copying Hex Value
 
-### `npm run eject`
+![Copying Hex](https://media.giphy.com/media/yMx0BV4Msop02FDY18/giphy.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Deleting Color Swatch
+![Deleting Swatch](https://media.giphy.com/media/AWxq9Eqt5TBf9nYxBQ/giphy.gif)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<hr style="background-color: #5c5c5c;height: 2.0px;"/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h2 style="color:#81DBD8"> Installation: </h2>
 
-## Learn More
+Getting your own copy of iDropr is easy!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Fork and clone this repo to your local machine
+- `npm install`
+- `npm run build`
+- Enable Developer Mode in Chrome Extension Manager
+- Click 'load unpacked'
+- Navigate to the iDropr Build Directory
+- Apply and enjoy!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Scripts
 
-### Code Splitting
+The following scripts can be found in package.json
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<hr style="background-color: #5c5c5c;height: 2.0px;"/>
 
-### Analyzing the Bundle Size
+`npm run build`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<i> Builds the extension for use in chrome </i>
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<hr style="background-color: #5c5c5c;height: 2.0px;"/>
 
-### Advanced Configuration
+<h2 style="color:#81DBD8"> Contributors </h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table >
+    <td align="center">
+        <a href="https://github.com/Symphon-y" style="color: white; text-decoration: none;">
+            <img src="https://avatars.githubusercontent.com/u/90964291?v=4?s=100" width="100px;" alt=""/>
+            <br />
+            <sub>
+                <b><span style="color: white"> Travis R. </span> | <span style="color: #81DBD8"> Symphon-y </span></b>
+            </sub>
+        </a>
+        <br /><br>
+    </td>
+<table>
+</div>
