@@ -26,20 +26,25 @@ function App() {
   };
 
   useEffect(() => {
-    console.log('hello from useEffect');
-    console.log(currentColors);
-  });
+    // console.log('hello from useEffect');
+    // console.log(currentColors);
+  }, []);
 
   const onAddBtnClick = (event) => {
     //TODO create random id and so forth here > give them as props
     let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     setpickerList([
       ...pickerList,
-      <ColorPicker key={pickerList.length} randomColor={randomColor} />,
+      <ColorPicker
+        key={pickerList.length}
+        randomColor={randomColor}
+        setpickerList={setpickerList}
+        pickerList={pickerList}
+      />,
     ]);
   };
 
-  console.log(backgroundColors);
+  //console.log(backgroundColors);
   return (
     <div className='App' style={bgStyle}>
       <div className='App-header'>
