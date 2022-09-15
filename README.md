@@ -12,7 +12,7 @@
 
  <h2 style="color:#81DBD8"> About iDropr: </h2>
 
-iDropr is a chrome extensio that gives you quick access to an eyedropper tool to quickly get the hex, rgb, or hsl values of any color on your desktop.
+iDropr is a chrome extension that gives you quick access to an eyedropper tool to quickly get the hex, rgb, or hsl values of any color on your desktop.
 
 <hr style="background-color: #5c5c5c;height: 2.0px;"/>
 
